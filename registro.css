@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    margin: 0;
+    background: linear-gradient(to right, #000, #737373);
+}
+
+/* Container para o formulário */
+.formulario {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 700px; /* Limita a largura máxima do formulário */
+    margin-left: 20px; /* Alinha o formulário à esquerda */ 
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}

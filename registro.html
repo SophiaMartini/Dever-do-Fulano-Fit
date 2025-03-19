@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Fulano Fit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="estilização.css">
+    <link rel="stylesheet" href="registro.css">
     <link rel="icon" type="image/png" href="/assets/logo.png">
     <script src="funcao.js"></script>
 </head>
 <body>
     <div class="formulario">
-        <form class="registro">
+        <form class="registro" onsubmit="return validarSenhas()">
             <h1 class="ola">Olá,</h2>
             <p class="ola">Para continuarmos sua experiência, preencha os campos com suas informações</p>
-            s
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required>
+                <input type="text" name="email" id="email" placeholder="Digite o seu email" required>
+                <input type="password" name="senha1" id="senha1" placeholder="Digite a sua senha"required>
+                <input type="password" name="senha2" id="senha2" placeholder="Confirme a sua senha" required>
+                <input type="text" name="peso" id="pes" placeholder="Qual o seu peso atual?" required>
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+                <input type="submit">
+                
+            </input>
         </form>
     </div>
   

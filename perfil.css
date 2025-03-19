@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4b4b4b, #1e1e1e);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.info-box {
+    background: #444;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+button.edit-btn {
+    background: orange;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.edit-btn:hover {
+    background: darkorange;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer img {
+    width: 40px;
+    margin: 0 10px;
+}
