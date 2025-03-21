@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #4b4b4b, #1e1e1e);
@@ -6,46 +13,67 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.container {
-    width: 60%;
+.tudo {
+    justify-content: space-between;
+    display: flex;
+}
+.caixaPerfil {
+    width: 100%;
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-.info-box {
     background: #444;
     padding: 15px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 60px;
     text-align: left;
 }
 
-button.edit-btn {
-    background: orange;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+h1 {
+    text-align: left;
+    margin: 60px;
+    font-size: 60px;
+    font-weight: 900;
 }
 
-button.edit-btn:hover {
+button {
+    background: orange;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    padding: 20px ;
+    height: 50px;
+    width: auto;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+
+button:hover {
     background: darkorange;
 }
 
-.footer {
+footer {
+    position: fixed;
     display: flex;
+    padding: 20px 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    background-color: orange;
+    height: 60px;
+    font-size: 35px;
 }
-
-.footer img {
-    width: 40px;
-    margin: 0 10px;
+footer a{
+    color: #000;
+}
+footer :hover {
+   color: rgb(37, 37, 37);
 }

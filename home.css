@@ -7,3 +7,22 @@
 body {
     background: -moz-radial-gradient(center,#000,#737373);
 }
+footer {
+    position: fixed;
+    display: flex;
+    padding: 20px 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    height: 60px;
+    font-size: 35px;
+}
+footer a{
+    color: #000;
+}
+footer :hover {
+   color: rgb(37, 37, 37);
+}

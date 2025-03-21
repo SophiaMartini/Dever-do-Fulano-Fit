@@ -1,14 +1,25 @@
-body {
-    background: linear-gradient(to center, #000, #737373)
-}
 * {
-    list-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     }
-    
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4b4b4b, #1e1e1e);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: left;
+    margin: 60px;
+    font-size: 60px;
+    font-weight: 900;
+}
+h1
 
 footer {
     position: fixed;
@@ -25,4 +36,8 @@ footer {
 }
 footer a{
     color: #000;
+}
+
+footer :hover {
+   color: rgb(37, 37, 37);
 }
