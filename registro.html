@@ -8,35 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="registro.css">
     <link rel="icon" type="image/png" href="/assets/logo.png">
-    <script src="funcao.js"></script>
+    <script src="registro.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="formulario">
-            <form class="registro" onsubmit="return validarSenhas()">
-                <h1 class="ola">Olá,</h1>
-                <p class="ola">Para continuarmos sua experiência, preencha os campos com suas informações</p>
-
+    <div class="formulario">
+        <form class="registro" id="registro">
+            <h1 class="ola">Olá,</h1>
+            <p class="ola">Para continuarmos sua experiência, preencha os campos com suas informações:</p>
                 <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required>
-                <input type="email" name="email" id="email" placeholder="Digite o seu email" required>
-                <input type="password" name="senha1" id="senha1" placeholder="Digite a sua senha" required>
-                <input type="password" name="senha2" id="senha2" placeholder="Confirme a sua senha" required>
-                <input type="text" name="peso" id="peso" placeholder="Qual o seu peso atual?" required>
-
-                <label for="sexo">Sexo:</label>
-                <select name="sexo" id="sexo" class="sexo">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                </select>
-
-                <input type="submit" value="Registrar">
-            </form>
-        </div>
-
-        <img src="assets/Adobe_Express_-_file.webp" alt="Imagem homem" class="imagem">
+                <input type="text" name="email" id="email" placeholder="Digite o seu email" required>
+                <label for="senha1">Senha: <input type="password" name="senha1" id="senha1" placeholder="Digite a sua senha" required></label>
+                <label for="senha2">Confirmar: <input type="password" name="senha2" id="senha2" placeholder="Confirme a sua senha" required></label>
+                <br><br>
+                <div class="infoCod">
+                    <label for="peso">Peso: </label>
+                    <input type="text" name="peso" id="peso" placeholder="00,0Kg" required>
+                    <label for="altura">Altura: </label>
+                    <input type="text" name="altura" id="altura" placeholder="0,00m" required>
+                    <label for="idade">Idade:</label>
+                    <input type="number" name="idade" id="idade" placeholder="00" required>
+                    <label for="sexo">Sexo:</label>
+                    <select name="sexo" id="sexo" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+                <label for="trh">Uso de Reposição Hormonal? 
+                    <select name="trh" id="trh">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </label>
+                <label for="objetivo">Objetivo: 
+                    <select name="objetivo" id="objetivo">
+                        <option value="hipertrofia">Hipertrofia</option>
+                        <option value="deficit_calorico">Déficit Calórico (Emagrecer)</option>
+                        <option value="superavit_calorico">Superáficit Calórico (Engordar)</option>
+                    </select>
+                </label>
+                <button type="submit">Enviar</button>
+        </form>
     </div>
-    <footer>
-        <h1>Fulano Fit - Melhor app para Calcular suas Energias!</h1>
-    </footer>
 </body>
 </html>
+
