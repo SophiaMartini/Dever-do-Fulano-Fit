@@ -8,25 +8,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="perfil.css">
     <link rel="icon" type="image/png" href="/assets/logo.png">
-    <script src="funcao.js"></script>
+    <script src="perfil.js" defer></script>
 </head>
 <body>
     <div class="tudo">
         <h1>Meu Perfil</h1>
-        <button class="edit-btn" onclick="editarPerfil()">Editar minhas informações</button>
+        <button class="edit-btn" onclick="editarPerfil()">Editar</button>
     </div>
-        <div class="caixaPerfil">
-            <div id="infos1"></div>
+
+    <div class="caixaPerfil">
+        <div id="infos1"></div>
+    </div>
+    <div class="caixaPerfil2">
+        <div id="infos2"></div>
+        <div id="infos3"></div>
+    </div>
+    <div id="form" style="display:none;">
         
-            <div id="infos2"></div>
+        <div class="editaform">
+        <h2>Editar Perfil</h2>
+        <form id="editar">
+            <input type="text" id="editarnome" placeholder="Nome">
+            <input type="email" id="editaremail" placeholder="Email">
+            <input type="password" id="editarsenha" placeholder="Nova Senha">
+            <input type="password" id="editarsenhaconfirmar" placeholder="Confirmar Senha">
+            
+            <select id="editarobjetivo">
+                <option value="Hipertrofia">Hipertrofia</option>
+                <option value="Déficit Calórico">Déficit Calórico (Emagrecer)</option>
+                <option value="Superáficit Calórico">Superáficit Calórico (Engordar)</option>
+            </select>
+            
+            <input type="text" id="editarpeso" placeholder="Peso">
+            <button type="submit">Salvar Alterações</button>
+        </form>
         </div>
+    </div>
     
-    <footer>    
-    <nav>
+    <footer>
+        <nav>
             <a href="receitas.html"><i class="fas fa-utensils"></i></a>
             <a href="home.html"><i class="fas fa-home"></i></a>
             <a href="perfil.html"><i class="fas fa-user-circle"></i></a>
-    </nav>
+        </nav>
     </footer>
 </body>
 </html>
