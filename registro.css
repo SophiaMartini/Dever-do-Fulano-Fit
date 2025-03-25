@@ -2,77 +2,71 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+    list-style: none;
+    font-family: sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4b4b4b, #1e1e1e);
-    color: white;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: center; 
     margin: 0;
-    padding: 0;
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-    
-    margin: 0;
-    background: 
-  linear-gradient(to right, rgba(0, 0, 0, 0.6), rgb(66, 66, 66)),
+    background-image: url(assets/Adobe_Express_-_file.webp);
+    background: linear-gradient(to right, #000, #737373);
 }
-img  {
-    display: flex;
-    margin-bottom: 0px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px;
-    height: auto;
- 
-}
+
 /* Container para o formulário */
 .formulario {
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    max-height: 700px; /* Limita a largura máxima do formulário */
-    margin-left: 20px; /* Alinha o formulário à esquerda */ 
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-.formulario input {
-    width: 100;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-
-
-}
-.formulario input:focus{
-    border-color: #4caf50;
-    outline: none;
-}
-
-.formulario button:hover {
-    background-color: #45a049;
-}
-footer {
-    position: fixed;
     display: flex;
-    padding: 20px 40px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: orange;
-    height: 60px;
+    width: 100%;
+    max-width: 600px;
+    max-height: auto;
+    margin-left: 10px;
+    margin: 50px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    background: linear-gradient(to bottom, #4d3100, #ffbf00)
+}
+form {
+    flex-direction: column;
+    display: flex;
+    color: #fff;
+
+}
+h1 {
+    font-weight: 900;
+    font-size: 40px;
+}
+input, select {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 18px
+}
+label {
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 700;
+
+}
+.infoCod {
+    justify-content: space-between;
+
+}
+button {
+    margin-top: 40px;
+    padding: 16px;
+    background: #f4f4f4 ;
+    color: #000;
     font-size: 16px;
-    font-display: flex;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+button:hover{
+    background: #c7bf8f;
 }
