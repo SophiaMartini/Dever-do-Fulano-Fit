@@ -1,26 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")); 
+    let usuarioAtual = JSON.parse(localStorage.getItem("usuarioAtual")); 
 
-    if (usuarios && usuarios.length > 0) {
-        let usuario = usuarios[0]; 
-
-       
+    if (usuarioAtual) {
         document.getElementById("infos1").innerHTML = `
-            <p><strong>Nome: </strong>${usuario.nome}</p>
-            <p><strong>Email: </strong>${usuario.email}</p>
+            <p><strong>Nome: </strong>${usuarioAtual.nome}</p>
+            <p><strong>Email: </strong>${usuarioAtual.email}</p>
         `;
 
         document.getElementById("infos2").innerHTML = `
-            <p><strong>Sexo: </strong>${usuario.sexo}</p>
-            <p><strong>Objetivo: </strong>${usuario.objetivo}</p>
-            <p><strong>Idade: </strong>${usuario.idade}</p>
+            <p><strong>Sexo: </strong>${usuarioAtual.sexo}</p>
+            <p><strong>Objetivo: </strong>${usuarioAtual.objetivo}</p>
+            <p><strong>Idade: </strong>${usuarioAtual.idade}</p>
         `;
 
         document.getElementById("infos3").innerHTML = `
-            <p><strong>TRH: </strong>${usuario.trh}</p>
-            <p><strong>Altura: </strong>${usuario.altura}</p>
-            <p><strong>Peso: </strong>${usuario.peso}</p>
+            <p><strong>TRH: </strong>${usuarioAtual.trh}</p>
+            <p><strong>Altura: </strong>${usuarioAtual.altura}</p>
+            <p><strong>Peso: </strong>${usuarioAtual.peso}</p>
         `;
     } else {
         document.getElementById("infos1").textContent = "Nenhum usuário cadastrado.";
@@ -32,59 +29,64 @@ document.addEventListener("DOMContentLoaded", function () {
     window.editarPerfil = function () {
         document.getElementById("form").style.display = "block"; 
 
-       
-        if (usuarios && usuarios.length > 0) {
-            let usuario = usuarios[0];
-            document.getElementById("editarnome").value = usuario.nome;
-            document.getElementById("editaremail").value = usuario.email;
-            document.getElementById("editarobjetivo").value = usuario.objetivo;
-            document.getElementById("editarpeso").value = usuario.peso;
+        if (usuarioAtual) {
+            document.getElementById("editarnome").value = usuarioAtual.nome;
+            document.getElementById("editaremail").value = usuarioAtual.email;
+            document.getElementById("editarobjetivo").value = usuarioAtual.objetivo;
+            document.getElementById("editarpeso").value = usuarioAtual.peso;
         }
     };
-
 
     const formEdit = document.getElementById("editar");
     formEdit.addEventListener("submit", function (e) {
         e.preventDefault();
 
-       
-        let usuario = usuarios[0];
-        const novoUsuario = {
-            nome: document.getElementById("editarnome").value,
-            email: document.getElementById("editaremail").value,
-            senha: document.getElementById("editarsenha").value,
-            sexo: usuario.sexo,   
-            idade: usuario.idade,
-            altura: usuario.altura,
-            peso: document.getElementById("editarpeso").value, 
-            trh: usuario.trh,     
-            objetivo: document.getElementById("editarobjetivo").value, 
-        };
+        // Atualiza o usuário atual com os novos valores
+        usuarioAtual.nome = document.getElementById("editarnome").value;
+        usuarioAtual.email = document.getElementById("editaremail").value;
+        usuarioAtual.peso = document.getElementById("editarpeso").value;
+        usuarioAtual.objetivo = document.getElementById("editarobjetivo").value;
 
+        // Se a senha foi alterada, verifica se as senhas coincidem
+        let novaSenha = document.getElementById("editarsenha").value;
+        let confirmarSenha = document.getElementById("editarsenhaconfirmar").value;
 
-        if (novoUsuario.senha !== document.getElementById("editarsenhaconfirmar").value) {
-            alert("As senhas não coincidem.");
-            return; 
+        if (novaSenha && novaSenha.length >= 6) {
+            if (novaSenha !== confirmarSenha) {
+                alert("As senhas não coincidem.");
+                return;
+            }
+            usuarioAtual.senha = novaSenha;
         }
 
-        usuarios[0] = novoUsuario; // Atualiza o primeiro usuário
-        localStorage.setItem("usuarios", JSON.stringify(usuarios)); // Salva a lista de usuários de volta no localStorage
+        // Salva as mudanças no localStorage
+        localStorage.setItem("usuarioAtual", JSON.stringify(usuarioAtual));
 
+        // Atualiza a lista de usuários no localStorage
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        let index = usuarios.findIndex(user => user.email === usuarioAtual.email);
+        if (index !== -1) {
+            usuarios[index] = usuarioAtual;
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        }
+
+        // Atualiza a exibição do perfil na tela
         document.getElementById("infos1").innerHTML = `
-            <p><strong>Nome: </strong>${novoUsuario.nome}</p>
-            <p><strong>Email: </strong>${novoUsuario.email}</p>
+            <p><strong>Nome: </strong>${usuarioAtual.nome}</p>
+            <p><strong>Email: </strong>${usuarioAtual.email}</p>
         `;
         document.getElementById("infos2").innerHTML = `
-            <p><strong>Sexo: </strong>${novoUsuario.sexo}</p>
-            <p><strong>Objetivo: </strong>${novoUsuario.objetivo}</p>
-            <p><strong>Idade: </strong>${novoUsuario.idade}</p>
+            <p><strong>Sexo: </strong>${usuarioAtual.sexo}</p>
+            <p><strong>Objetivo: </strong>${usuarioAtual.objetivo}</p>
+            <p><strong>Idade: </strong>${usuarioAtual.idade}</p>
         `;
         document.getElementById("infos3").innerHTML = `
-            <p><strong>TRH: </strong>${novoUsuario.trh}</p>
-            <p><strong>Altura: </strong>${novoUsuario.altura}</p>
-            <p><strong>Peso: </strong>${novoUsuario.peso}</p>
+            <p><strong>TRH: </strong>${usuarioAtual.trh}</p>
+            <p><strong>Altura: </strong>${usuarioAtual.altura}</p>
+            <p><strong>Peso: </strong>${usuarioAtual.peso}</p>
         `;
 
         document.getElementById("form").style.display = "none";
+        alert("Perfil atualizado com sucesso!");
     });
 });
