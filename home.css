@@ -5,8 +5,60 @@
     font-family: sans-serif;
     }
 body {
-    background: -moz-radial-gradient(center,#000,#737373);
+   background: linear-gradient(to right, #4b4b4b, #1e1e1e);
+   color: #fff;
+   margin: 30px;
 }
+.infos {
+    background: linear-gradient(to left, #4b4b4b, #1e1e1e);
+    padding: 40px;
+    border-radius: 20px;
+    width: 500px;
+    margin-top: 30px;
+}
+h2 {
+    margin-top: 20px;
+}
+.barra {
+    margin: 1px 50px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fff3ca;
+
+}
+
+.preenchimento {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.nutriente {
+    display: flex;
+    align-items: left;
+    margin: 10px
+}
+
+.nutriente span {
+    font-weight: bold;
+}
+
+.barra-proteinas {
+    background-color: #ffb20b;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.barra-gorduras {
+    background-color: #ffb20b;
+    height: 100%;
+    border-radius: 5px;
+}
+.barra-carboidratos {
+    background-color: #ffb20b;
+    ;
+}
+
 footer {
     position: fixed;
     display: flex;
