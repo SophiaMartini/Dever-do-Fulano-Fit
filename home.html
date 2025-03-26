@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,22 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial - Fulano Fit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="icon" type="image/png" href="/assets/logo.png">
-    <script src="funcao.js"></script>
+    <script src="home.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <div>
-        <img src="" alt="">
-    </body>
-        <h1>Meu objetivo: <div class-="objetivo"></div> </h1>
-        <footer> 
-            <nav>
-                <a href="receitas.html"><i class="fas fa-utensils"></i></a>
-                <a href="home.html"><i class="fas fa-home"></i></a>
-                <a href="perfil.html"><i class="fas fa-user-circle"></i></a>
-            </nav>
-        </footer>
+<body>   
+
+    <h1>Meu objetivo: <span id="objetivoUsuario"></span></h1>
+    <div class="infos">
+    <h2>Informações Nutricionais Diárias</h2>
+        <div class="nutriente">
+            <span>Proteínas:</span>
+            <span id="proteinas"></span> g
+        </div>
+        <div class="barra">
+            <div id="barraProteinas" class="preenchimento barra-proteinas"></div>
+        </div>
+        <div class="nutriente">
+            <span>Gorduras:</span>
+            <span id="gorduras"></span> g
+        </div>
+        <div class="barra">
+            <div id="barraGorduras" class="preenchimento barra-gorduras"></div>
+        </div>
+        <div class="nutriente">
+            <span>Carboidratos:</span>
+            <span id="carboidratos"></span> g
+        </div>
+        <div class="barra">
+            <div id="barraCarboidratos" class="preenchimento barra-carboidratos"></div>
+        </div>
+        <div><h2>Minha Atividade: <span id="fatorAtividadeUsuario"></span></h2></div>
+    </div>
+    <footer> 
+        <nav>
+            <a href="receitas.html"><i class="fas fa-utensils"></i></a>
+            <a href="home.html"><i class="fas fa-home"></i></a>
+            <a href="perfil.html"><i class="fas fa-user-circle"></i></a>
+        </nav>
+    </footer>
+
 </body>
 </html>
-
