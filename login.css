@@ -9,26 +9,28 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     margin: 0;
-    background: linear-gradient(to right, #000, #737373);
-    background-image: url(fundo-academia.jpg.jpeg);
+    background-image: url(assets/\(1\).png);
+    background-repeat: no-repeat;
+    background-color: #1d1d1d;
 }
 
 .formulario {
     display: flex;
+    width: 500px;
     max-width: 600px;
-    margin: 50px;
-    border-radius: 40px;
+    margin: 200px;
+    border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    background: linear-gradient(to bottom, #4d3100, #ffbf00);
+    padding: 20px;
+    background: linear-gradient(to bottom, #4d3100, orange);
     flex-direction: column;
 }
 
 form {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -54,13 +56,13 @@ label {
 }
 
 button {
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 16px;
     background: #f4f4f4;
     color: #000;
     font-size: 16px;
     font-weight: 700;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
     border: none;
@@ -68,5 +70,44 @@ button {
 
 button:hover {
     background: #c7bf8f;
+}
+
+.footer {
+    position: fixed;
+    height: 60px;
+    display: flex;
+    padding: 18px 40px;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer img {
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.footer .fulanofit {
+    width: 20px;
+    display: flex;
+}
+.fulanofit h3 {
+    font-size: 35px;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer a {
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    border-style: none;
+    border-radius: 90px;
+    padding: 10px 15px;
+    background: linear-gradient(to left,#cc7400 , #fa8e00, hsl(34, 97%, 77%));
 }
 
