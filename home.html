@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial - Fulano Fit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="home.css">
     <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="home.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>   
 
-    <h1>Meu objetivo: <span id="objetivoUsuario"></span></h1>
+    <h1 class="obj">Meu objetivo: <span id="objetivoUsuario"></span></h1>
     <div class="infos">
     <h2>Informações Nutricionais Diárias</h2>
         <div class="nutriente">
@@ -38,8 +47,198 @@
         <div class="barra">
             <div id="barraCarboidratos" class="preenchimento barra-carboidratos"></div>
         </div>
-        <div><h2>Minha Atividade: <span id="fatorAtividadeUsuario"></span></h2></div>
     </div>
+    <br>
+    <br>
+    <div class="hiper">
+    <h1>Recomendações para Hipertrofia</h1>
+    <div class="caixaReceita">
+        <div class="receita" onclick="abrirPopup('Omelete com Aveia e Frutas', '4 claras de ovo;<br>1 ovo inteiro;<br>1 colher de sopa de aveia em flocos;<br>1/2 banana fatiada; <br>1 colher de chá de mel;<br>1 fatia de pão integral;<br>1 copo de leite desnatado.<br>', '<strong>1°:</strong>Bata as claras e o ovo inteiro em uma tigela.<br><strong> 2°:</strong>Adicione a aveia e misture bem.<br><strong> 3°:</strong>Aqueça uma frigideira antiaderente e despeje a mistura, deixando dourar de ambos os lados.<br><strong> 4°:</strong>Sirva com a banana fatiada e mel por cima.<br><strong> 5°:</strong> Acompanhe com o pão integral e o copo de leite.', 'https://www.youtube.com/embed/mtTc7uFJB4U?si=i3uw4O1L7qyD88hS')">
+            <img src="assets/img/images (4).jpg" alt="">
+            <div class="nomeReceita">
+                <h3>Omelete com Aveia e Frutas</h3>
+                <p>
+                    <strong>Aproximadamente 450kcal</strong><br>
+                    <strong>Proteínas: </strong>30g<br>
+                    <strong>Carboidratos: </strong>60g<br>
+                    <strong>Gorduras: </strong>12g<br>
+                    <strong>Fibras: </strong>+- 5g
+                </p>            
+            </div>
+        </div>
+        <div class="receita" onclick="abrirPopup('Frango com Batata-doce e Brócolis', '150g de peito de frnago grelhado<br>200g ded batata-doce cozida;<br>1 xícara de brócols cozidos no vapor;<br>1 colher de sopa de azeite de oliva;', '<strong>1°:</strong>Grelhe o peito de frango até que fique bem cozido.<br><strong> 2°:</strong>Cozinhe a batata-doce até que fique macia e corte-a em rodelas.<br><strong> 3°:</strong>Cozinhe os brócolis no vapor até ficarem macios.<br><strong> 4°:</strong>Misture tudo em um prato, adicione o azeite de oliva por cima.', 'https://www.youtube.com/embed/Eg_TiGlDAM4?si=5vv8zfjTTreViCi9')">
+            <img src="assets/img/3409448-bife-de-frango-com-brocolis-e-cenoura-gratis-foto.webp" alt="">
+            <div class="nomeReceita">
+                <h3>Frango com Batata-doce e Brócolis</h3>
+                <p>
+                    <strong>Aproximadamente 500kcal</strong><br>
+                    <strong>Proteínas: </strong>40g<br>
+                    <strong>Carboidratos: </strong>60g<br>
+                    <strong>Gorduras: </strong>12g<br>
+                    <strong>Fibras: </strong>9g
+                </p>                    
+            </div>
+        </div>
+        <div class="receita" onclick="abrirPopup('Iorgute Grego com Granola e Castanhas', '1 pode de iogurte grego (170g);<br>2 colheres de sopa de granola sem açúcar;<br>10g de castanhas de caju ou amêndoas picadas.', '<strong>1°:</strong>Em uma tigela, adicione o iogurte.<br><strong> 2°:</strong> Em uma tigela, coloque os farelos de aveia e de trigo, o fermento e o sal. Misture bem.<br><strong> 3°:</strong> Bata o ovo e adicione à mistura de farelos, junto com o iogurte natural e o azeite (se estiver utilizando). Misture bem até formar uma massa homogênea.<br><strong> 4°:</strong> Se a massa estiver muito densa, adicione uma colher de sopa de água para deixar mais maleável.<br><strong> 5°:</strong> Despeje a massa em uma forma pequena (pode ser uma forma de silicone ou untada) e modele no formato de um pão pequeno ou um pãozinho de porção individual.<br><strong> 6°:</strong> Coloque no forno por cerca de 25-30 minutos, ou até que o pão esteja dourado e firme ao toque.<br><strong> 7°:</strong> Retire do forno e deixe esfriar um pouco antes de cortar.','https://www.youtube.com/embed/OS5MWxONA2U?si=A0bT0_ul1x6-DuuY')">
+            <img src="assets/img/banner_receitas_mobile-600x465.png" alt="">
+            <div class="nomeReceita">
+                <h3>Iorgute com Granola e Castanhas</h3>
+                <p>
+                    <strong>Aproximadamente 350kcal</strong><br>
+                    <strong>Proteínas: </strong>20g<br>
+                    <strong>Carboidratos: </strong>40g<br>
+                    <strong>Gorduras: </strong>15g<br>
+                    <strong>Fibras: </strong>2,5g
+                </p>                    
+            </div>
+        </div>
+        <div class="receita" onclick="abrirPopup('Salmão com Arroz Integral e Abobrinha Grelhada', '150g de filé de salmão;<br>1/2 xícara de arroz integral cozido;<br>1 abobrinha média fatiada;<br>1 colher de chá de azeite de oliva;<br>Sal e pimenta a gosto.', '<strong>1°:</strong> Tempere o filé com sal e pimenta.<br><strong> 2°:</strong> Grelhe o salmão em uma frigideira com um fio de azeite. <br><strong> 3°:</strong> Cozinhe o arroz integral conforme as instruções da embalagem. <br><strong> 4°:</strong> Grelhe fatias de abobrinha até ficarem douradas.<br><strong> 5°:</strong> Sirva o salmão com arroz e as abobrinhas. ','https://www.youtube.com/embed/8oRBXqHJxGw?si=dEmHz1KeJiH94-wu')">
+            <img src="assets/img/cb38aec1-b175-4dd5-b1c0-55328f554e87 (1).png" alt="">
+            <div class="nomeReceita">
+                <h3>Salmão com Ar
+                    roz Integral e Abobrinha Grelhada</h3>
+                <p>
+                    <strong>Aproximadamente 180kcal</strong><br>
+                    <strong>Proteínas: </strong>4g<br>
+                    <strong>Carboidratos: </strong>17g<br>
+                    <strong>Gorduras: </strong>12g<br>
+                    <strong>Fibras: </strong>6g
+                </p>                    
+            </div>
+        </div>
+    </div>
+    <div class="deficit">
+        <br><br>
+    <h1>Recomendações para Déficit Calórico (Emagrecer)</h1>
+    <div class="caixaReceita">
+        <div class="receita" onclick="abrirPopup('Tapioca com Frango e Abacate', '2 colheres e sopa de goma de tapioca;<br>50g de peito de frango desfiado;<br>1/4 de abacate;<br>1 colher de chá de azeite de oliva.', '<strong>1°:</strong> Prepare a tapioca em uma frigideira antiaderente<br><strong> 2°:</strong> Recheie com o frango desfiado.<br><strong> 3°:</strong> Adicione o abacate fatiado por cima e finalize com azeite de oliva. ', 'https://youtube/embed/jpUwkK0TWzg?si=PFiCO_4TFtZKvVU3')">
+           <img src="assets/img/tapioca.jpg" alt="">
+            <div class="nomeReceita">
+                <h3>Tapioca com Frango e Abacate</h3>
+                <p>
+                    <strong>Aproximadamente 300kcal</strong><br>
+                    <strong>Proteínas: </strong>25g<br>
+                    <strong>Carboidratos: </strong>20g<br>
+                    <strong>Gorduras: </strong>15g<br>
+                    <strong>Fibras: </strong>6g
+                </p>            
+            </div>
+        </div>
+        <div class="receita" onclick="abrirPopup('Peito de Frango com Quinoa e Salada de Folhas', '150g de peito de frango grelhado;<br>1/2 xícara de quinoa cozida;<br>1 xícara de folhas de alface e rúcula;<br>1/2 tomate picado; <br>1 colher de sopa de azeite de oliva;<br>Suco de limão.', '<strong>1°:</strong> Grelhe o peito de frango até dourar.<br><strong> 2°:</strong> Cozinhe a quinoa conforme as instruções da embalagem.<br><strong> 3°:</strong> Prepare a salada com as folhas de alface e rúcula, tomate e azeite de oliva, temperando com suco de limão.', 'https://youtube/embed/5np4Qc4ZQhc?si=k82vxSMQ-0Le5WE1')">
+            <img src="assets/img/images (7).jpg" alt="">
+                <div class="nomeReceita">
+                    <h3>Peito de Frango com Quinoa e Salada de Folhas</h3>
+                    <p>
+                        <strong>Aproximadamente 400kcal</strong><br>
+                        <strong>Proteínas: </strong>40g<br>
+                        <strong>Carboidratos: </strong>35g<br>
+                        <strong>Gorduras: </strong>15g<br>
+                        <strong>Fibras: </strong>8g
+                    </p>            
+                </div>
+            </div>
+            <div class="receita" onclick="abrirPopup('Iogurte Natural com Morangos e Sementes de Chia', '1 pote de iogurte natural desnatado (170g);<br>5 morangos fatiados;<br>1 colher de sopa de sementes de chia.', '<strong>1°:</strong> Em uma tigela, coloque o iogurte natural.<br><strong> 2°:</strong> Adicione os morangos fatiados e as sementes de chia por cima.', 'https://youtube/embed/TJlzg_1XYKU?si=TJa11A4fc9aFmZGq')">
+                <img src="assets/img/images (8).jpg" alt="">
+                <div class="nomeReceita">
+                    <h3>Iogurte Natural com Morangos e Sementes de Chia</h3>
+                    <p>
+                        <strong>Aproximadamente 180kcal</strong><br>
+                        <strong>Proteínas: </strong>12g<br>
+                        <strong>Carboidratos: </strong>15g<br>
+                        <strong>Gorduras: </strong>7g<br>
+                        <strong>Fibras: </strong>6g
+                    </p>            
+                </div>
+            </div>
+                <div class="receita" onclick="abrirPopup('Tilápia com Abobrinha e Cogumelos', '150g de filé de tilápia;<br>1 abobrinha média fatiada;<br>100g de cogumelos;<br>1 colher de chá de azeite de oliva; <br>Sal e pimenta a gosto.', '<strong>1°:</strong> Tempere o filé de tilápia com sal e pimenta e grelhe até ficar dourado.<br><strong> 2°:</strong> Fatie a abobrinha e cozinhe com os cogumelos no azeite de oliva até ficarem macios.<br><strong> 3°:</strong> Sirva o peixe com os legumes.', 'https://www.youtube.com/embed/eV24AhQ5gfA?si=vuQ8kdP32sBmuI4V')">
+                    <img src="assets/img/nc-tilapia-abobrinha-ok-200322.webp" alt="">
+                    <div class="nomeReceita">
+                        <h3>Tilápia com Abobrinha e Cogumelos</h3>
+                        <p>
+                            <strong>Aproximadamente 350kcal</strong><br>
+                            <strong>Proteínas: </strong>35g<br>
+                            <strong>Carboidratos: </strong>12g<br>
+                            <strong>Gorduras: </strong>18g<br>
+                            <strong>Fibras: </strong>4g
+                        </p>            
+                    </div>
+                </div>
+            </div><br><br>
+    <div class="superaficit">
+    <h1>Recomendações para Superáfit Calórico (Engordar)</h1>
+    <div class="caixaReceita">
+        <div class="receita" onclick="abrirPopup('Panquecas de Aveia com Banana e Mel', '1 xícara de aveia em flocos;<br>1 banana amassada;<br>2 ovos inteiros;<br>1 colher de sopa de mel; <br>1/2 colher de chá de canela;<br>1 colher de chá de óleo de coco (para untar a frigideira).', '<strong>1°:</strong> Bata todos os ingredientes no liquidificador até obter uma massa homogênea.<br><strong> 2°:</strong> Aqueça a frigideira com o óleo de coco e faça as panquecas, dourando de ambos os lados.<br><strong> 3°:</strong> Sirva com mel por cima.', 'https://www.youtube.com/embed/8oQ0X8JvvGo?si=vugW3AoJNaSjEiZP')">
+            <img src="assets/img/1022788467-panqueca-banana-aveia-e-mel (1).webp" alt="">
+            <div class="nomeReceita">
+                <h3>Panquecas de Aveia com Banana e Mel</h3>
+                <p>
+                    <strong>Aproximadamente 450kcal</strong><br>
+                    <strong>Proteínas: </strong>18g<br>
+                    <strong>Carboidratos: </strong>60g<br>
+                    <strong>Gorduras: </strong>15g<br>
+                    <strong>Fibras: </strong>7g
+                </p>            
+            </div>
+        </div>
+            <div class="receita" onclick="abrirPopup('Arroz Integral com Feijão, Carne Moída e Brócolis', ';<br>;<br>;<br>; <br>;<br>;<br>);<br>.', '<strong>1°:</strong>;<br><strong> 2°:</strong> ;<br><strong> 3°:</strong> ', 'https//:www.youtube.com/watch?v=fxHF8etnmLs')">
+                <img src="assets/img/horta-local-monte-seu-prato-3-60c8b6de794d2.jpg" alt="">
+                <div class="nomeReceita">
+                    <h3>Arroz Integral com Feijão, Carne Moída e Brócolis</h3>
+                    <p>
+                        <strong>Aproximadamente 650kcal</strong><br>
+                        <strong>Proteínas: </strong>40g<br>
+                        <strong>Carboidratos: </strong>75g<br>
+                        <strong>Gorduras: </strong>20g<br>
+                        <strong>Fibras: </strong>14g
+                    </p>            
+                </div>
+            </div>
+                <div class="receita" onclick="abrirPopup('Vitamina de Abacate com Castanhas', '1/2 abacate médio;<br> 1 copo (250ml) de leite integral;<br> 1 colher de sopa de aveia;<br> 1 colher de sopa de mel; <br> 6 castanhas-do-pará;);<br>.', '<strong>1°:</strong> Bata todos os ingredientes no liquidificador até obter uma textura homogênea.;<br><strong> 2°:</strong> Sirva gelado.;<br> ', 'https://www.youtube.com/embed/5qJnSJBJvs8?si=qmmjpBxnRNeLHwci')">
+                    <img src="assets/img/aba.jpg" alt="">
+                    <div class="nomeReceita">
+                        <h3>Vitamina de Abacate com Castanhas
+
+                        </h3>
+                        <p>
+                            <strong>Aproximadamente</strong>600 kcal<br>
+                            <strong>Proteínas: </strong>12g<br>
+                            <strong>Carboidratos: </strong>45g<br>
+                            <strong>Gorduras: </strong>40g<br>
+                            <strong>Fibras: </strong>6g
+                        </p>            
+                    </div>
+                </div>
+                    <div class="receita" onclick="abrirPopup('Omelete de Espinafre com Queijo e Pão Integral', '2 ovos inteiros; <br> 1/2 xícara de espinafre picado; <br> 30g de queijo minas ou muçarela; <br> 1 colher de chá de azeite;<br> 1 fatia de pão integral.', '<strong>1°:</strong> Bata os ovos e misture o espinafre.<br><strong> 2°:</strong> Aqueça o azeite em uma frigideira e despeje os ovos.<br><strong> 3°:</strong> Cozinhe em fogo baixo, adicionando o queijo antes de dobrar.<br><strong> 4°: </strong> Sirva com o pão integral<br>', 'https://www.youtube.com/5KGmmEJbdGg?si=9rEr3XzVY2R-l57u')">
+                        <img src="assets/img/cb38aec1-b175-4dd5-b1c0-55328f554e87 (1).png" alt="">
+                        <div class="nomeReceita">
+                            <h3>Omelete de Espinafre com Queijo e Pão Integral</h3>
+                            <p>
+                                <strong>Aproximadamente 500kcal</strong><br>
+                                <strong>Proteínas: </strong>14g<br>
+                                <strong>Carboidratos: </strong>60g<br>
+                                <strong>Gorduras: </strong>18g<br>
+                                <strong>Fibras: </strong>7g<br>
+                            </p>            
+                        </div>
+                    </div>
+                </div>
+        <div class="overlay" id="overlay" onclick="fecharPopup()"></div>
+        <div class="popUp" id="popUp">
+            <button class="fechar" onclick="fecharPopup()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="caixaPopUp">
+                <h2 id="nomePopUp"></h2><br>
+                <p><strong>Ingredientes</strong></p><br>
+                <p id="ingredientesPopUp"></p><br>
+                <p><strong>Modo de Preparo</strong></p><br>
+                <p id="modoPreparo"></p><br><br>
+                <div class="botoesPopUp">
+                    <button onclick="mostrarVideo()">Ver Vídeo</button>
+                </div>
+                <div class="video" id="video">
+                    <iframe id="video-frame" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div><br><br><br>
     <footer> 
         <nav>
             <a href="receitas.html"><i class="fas fa-utensils"></i></a>
