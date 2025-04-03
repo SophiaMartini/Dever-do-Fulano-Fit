@@ -89,3 +89,28 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("fatorAtividadeUsuario").textContent = `${trh} (${fatorAtividade})`;
 });
 
+function abrirPopup(receita, ingredientes, modo, videoUrl) {
+    document.getElementById('nomePopUp').innerHTML = receita;
+    document.getElementById('ingredientesPopUp').innerHTML = ingredientes;
+    document.getElementById('modoPreparo').innerHTML = modo;
+
+    document.getElementById('popUp').classList.add('ativo');
+    document.getElementById('overlay').classList.add('ativo');
+    
+    document.getElementById('video').style.display = 'none';
+
+    document.getElementById('video-frame').src = videoUrl;
+}
+
+function fecharPopup() {
+    document.getElementById('popUp').classList.remove('ativo');
+    document.getElementById('overlay').classList.remove('ativo');
+}
+
+function mostrarIngredientes() {;
+    document.getElementById('video').style.display = 'none'; // Esconde o vídeo
+}
+
+function mostrarVideo() {
+    document.getElementById('video').style.display = 'block';
+}
